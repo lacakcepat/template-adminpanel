@@ -1,0 +1,79 @@
+/* FoNTS CSS
+ *
+ * IMPORT FONTS STYLE
+ * 300, 400, 600, 700
+ *
+ */
+
+ @font-face {
+    font-family: 'Nunito';
+    src: url('/font/Nunito/Nunito-SemiBold.eot');
+    src: url('/font/Nunito/Nunito-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/font/Nunito/Nunito-SemiBold.woff2') format('woff2'),
+        url('/font/Nunito/Nunito-SemiBold.woff') format('woff'),
+        url('/font/Nunito/Nunito-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/font/Nunito/Nunito-Bold.eot');
+    src: url('/font/Nunito/Nunito-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/font/Nunito/Nunito-Bold.woff2') format('woff2'),
+        url('/font/Nunito/Nunito-Bold.woff') format('woff'),
+        url('/font/Nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/font/Nunito/Nunito-Light.eot');
+    src: url('/font/Nunito/Nunito-Light.eot?#iefix') format('embedded-opentype'),
+        url('/font/Nunito/Nunito-Light.woff2') format('woff2'),
+        url('/font/Nunito/Nunito-Light.woff') format('woff'),
+        url('/font/Nunito/Nunito-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/font/Nunito/Nunito-Regular.eot');
+    src: url('/font/Nunito/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/font/Nunito/Nunito-Regular.woff2') format('woff2'),
+        url('/font/Nunito/Nunito-Regular.woff') format('woff'),
+        url('/font/Nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------- END FONTS STYLE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+
+    .notif-navbar {
+        width: 250px;
+        padding: 1.5rem;
+        height: 280px;
+    }
+
+    .header-icon {
+        transform: translateY(5px);
+    }
+}
+
+.navbar-logo {
+    width: auto;
+    height: 100%;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+}
