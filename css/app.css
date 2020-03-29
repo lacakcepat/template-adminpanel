@@ -41,7 +41,7 @@ html {
   padding: 1.5rem;
   height: 280px; }
 
-.navbar .header-icon {
+.navbar .notif-navbar-btn {
   transform: translateY(5px); }
 
 .navbar-logo {
@@ -50,3 +50,24 @@ html {
   .navbar-logo img {
     width: auto;
     height: 100%; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/"; }
+
+.logo-form {
+  margin-bottom: 35px; }
+  .logo-form img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto; }
+
+form .bootstrap-tagsinput, form .form-control {
+  height: auto;
+  font-size: 16px;
+  padding: 15px; }
+
+@media all and (max-width: 1199px) {
+  main.content-login {
+    padding: 100px 0;
+    height: auto !important; } }
