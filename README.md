@@ -5,6 +5,7 @@
 - login.html
 - index.html
 - users.html
+- user.html
 - 404.html
  
 
