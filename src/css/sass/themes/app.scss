@@ -109,6 +109,14 @@ form {
     }
 }
 
+.user-page {
+
+    .badge.badge-pill {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+}
+
 @media all and (max-width: 1199px) {
     main {
         
