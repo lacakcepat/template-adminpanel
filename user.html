@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dore jQuery</title>
+    <title>Nama Users - AlphaTeam19</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="font/iconsmind-s/css/iconsminds.css" />
     <link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css" />
 
+    <link rel="stylesheet" href="css/vendor/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="css/vendor/datatables.responsive.bootstrap4.min.css" />
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendor/bootstrap.rtl.only.min.css" />
     <link rel="stylesheet" href="css/vendor/component-custom-switch.min.css" />
     <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/app.css" />
 </head>
 
 <body id="app-container" class="menu-sub-hidden show-spinner no-footer">
@@ -40,39 +43,14 @@
                 </svg>
             </a>
 
-            <div class="search" data-search-path="Pages.Search.html?q=">
-                <input placeholder="Search...">
-                <span class="search-icon">
-                    <i class="simple-icon-magnifier"></i>
-                </span>
-            </div>
-
-            <a class="btn btn-sm btn-outline-primary ml-3 d-none d-md-inline-block"
-                href="https://1.envato.market/5kAb">&nbsp;BUY&nbsp;</a>
-        </div>
-
-
-        <a class="navbar-logo" href="index.html">
-            <span class="logo d-none d-xs-block"></span>
-            <span class="logo-mobile d-block d-xs-none"></span>
-        </a>
-
-        <div class="navbar-right">
             <div class="header-icons d-inline-block align-middle">
-                <div class="d-none d-md-inline-block align-text-bottom mr-3">
-                    <div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1" 
-                        data-toggle="tooltip" data-placement="left" title="Dark Mode">
-                        <input class="custom-switch-input" id="switchDark" type="checkbox" checked>
-                        <label class="custom-switch-btn" for="switchDark"></label>
-                    </div>
-                </div>
 
                 <div class="position-relative d-none d-sm-inline-block">
                     <button class="header-icon btn btn-empty" type="button" id="iconMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <i class="simple-icon-grid"></i>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right mt-3  position-absolute" id="iconMenuDropdown">
+                    <div class="dropdown-menu dropdown-menu-left mt-3  position-absolute" id="iconMenuDropdown">
                         <a href="#" class="icon-menu-item">
                             <i class="iconsminds-equalizer d-block"></i>
                             <span>Settings</span>
@@ -104,15 +82,35 @@
                         </a>
 
                     </div>
+                    <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton">
+                        <i class="simple-icon-size-fullscreen"></i>
+                        <i class="simple-icon-size-actual"></i>
+                    </button>
+                    <div class="d-none d-md-inline-block align-text-bottom mr-3">
+                        <div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1"
+                            data-toggle="tooltip" data-placement="left" title="Dark Mode">
+                            <input class="custom-switch-input" id="switchDark" type="checkbox" checked>
+                            <label class="custom-switch-btn" for="switchDark"></label>
+                        </div>
+                    </div>
                 </div>
 
+            </div>
+        </div>
+
+        <a class="navbar-logo" href="index.html">
+            <img src="img/logo/icon-lacakcepat.png" alt="Logo Lacakcepat">
+        </a>
+
+        <div class="navbar-right">
+            <div class="header-icons d-inline-block align-middle">
                 <div class="position-relative d-inline-block">
-                    <button class="header-icon btn btn-empty" type="button" id="notificationButton"
+                    <button class="header-icon btn btn-empty notif-navbar-btn" type="button" id="notificationButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="simple-icon-bell"></i>
                         <span class="count">3</span>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right mt-3 position-absolute" id="notificationDropdown">
+                    <div class="notif-navbar dropdown-menu dropdown-menu-right mt-3 position-absolute">
                         <div class="scroll">
                             <div class="d-flex flex-row mb-3 pb-3 border-bottom">
                                 <a href="#">
@@ -166,14 +164,7 @@
                         </div>
                     </div>
                 </div>
-
-                <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton">
-                    <i class="simple-icon-size-fullscreen"></i>
-                    <i class="simple-icon-size-actual"></i>
-                </button>
-
             </div>
-
             <div class="user d-inline-block">
                 <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -195,47 +186,22 @@
     </nav>
 
     <div class="menu">
-        <div class="main-menu">
-            <div class="scroll">
+        <div class="main-menu default-transition">
+            <div class="scroll ps ps--active-y">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#dashboard">
+                        <a href="index.html">
                             <i class="iconsminds-shop-4"></i>
                             <span>Dashboards</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#layouts">
-                            <i class="iconsminds-digital-drawing"></i> Pages
-                        </a>
-                    </li>
                     <li class="active">
-                        <a href="#applications">
-                            <i class="iconsminds-air-balloon-1"></i> Applications
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#ui">
-                            <i class="iconsminds-pantone"></i> UI
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#menu">
-                            <i class="iconsminds-three-arrow-fork"></i> Menu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Blank.Page.html">
-                            <i class="iconsminds-bucket"></i> Blank Page
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://dore-jquery-docs.coloredstrategies.com" target="_blank">
-                            <i class="iconsminds-library"></i> Docs
+                        <a href="users.html">
+                            <i class="iconsminds-male-female d-block"></i> Users
                         </a>
                     </li>
                 </ul>
-            </div>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 555px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 336px;"></div></div></div>
         </div>
 
         <div class="sub-menu">
@@ -710,213 +676,666 @@
             </div>
         </div>
     </div>
-    <main>
+    <main class="content-page user-page">
         <div class="container-fluid">
             <div class="row app-row">
-                <div class="col-12 chat-app">
-                    <div class="d-flex flex-row justify-content-between mb-3 chat-heading-container">
-                        <div class="d-flex flex-row chat-heading">
-                            <a class="d-flex" href="#">
-                                <img alt="Profile Picture" src="img/profile-pic-l.jpg"
-                                    class="img-thumbnail border-0 rounded-circle ml-0 mr-4 list-thumbnail align-self-center small">
-                            </a>
-                            <div class=" d-flex min-width-zero">
-                                <div
-                                    class="card-body pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                    <div class="min-width-zero">
-                                        <a href="#">
-                                            <p class="list-item-heading mb-1 truncate ">Sarah Kortney</p>
-                                        </a>
-                                        <p class="mb-0 text-muted text-small">Last seen today 01:24</p>
-                                    </div>
-                                </div>
+                <div class="col-12">
+                    <div class="mb-5">
+                        <h1>User Dashboard</h1>
+                        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+                            <ol class="breadcrumb pt-0">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">Users</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Nama User</li>
+                            </ol>
+                        </nav>
+                        <div class="text-zero top-right-button-container">
+                            <button type="button" class="btn btn-lg btn-outline-primary dropdown-toggle dropdown-toggle-split top-right-button top-right-button-single" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ACTIONS
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(160px, 43px, 0px);">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
 
-                    <div class="separator mb-5"></div>
-
-                    <div class="scroll">
-                        <div class="scroll-content">
-                            <div class="card d-inline-block mb-3 float-left mr-2">
-                                <div class="position-absolute pt-1 pr-2 r-0">
-                                    <span class="text-extra-small text-muted">09:25</span>
+                        <div class="col-lg-4 col-12 mb-4">
+                            <div class="card mb-4">
+                                <div class="position-absolute card-top-buttons">
+                                    <button class="btn btn-header-light icon-button" data-toggle="modal"
+                                    data-backdrop="static" data-target="#exampleModalRight">
+                                        <i class="simple-icon-pencil"></i>
+                                    </button>
                                 </div>
                                 <div class="card-body">
-                                    <div class="d-flex flex-row pb-2">
-                                        <a class="d-flex" href="#">
-                                            <img alt="Profile Picture" src="img/profile-pic-l.jpg"
-                                                class="img-thumbnail border-0 rounded-circle mr-3 list-thumbnail align-self-center xsmall">
-                                        </a>
-                                        <div class=" d-flex flex-grow-1 min-width-zero">
-                                            <div
-                                                class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                                <div class="min-width-zero">
-                                                    <p class="mb-0 truncate list-item-heading">Sarah Kortney</p>
-                                                </div>
-                                            </div>
+                                    <p class="list-item-heading mb-4">Profile Nama User</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2"><strong>Name</strong></p>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            <div class="progress-bar bg-theme-2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
                                         </div>
+                                        <p>
+                                            Developer Survey
+                                        </p>                                                
                                     </div>
-
-                                    <div class="chat-text-left">
-                                        <p class="mb-0 text-semi-muted">
-                                            What do you think about our plans for this product launch?
-                                        </p>
+                                    <div class="mb-4">
+                                        <p class="mb-2"><strong>Deskripsi</strong></p>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            <div class="progress-bar bg-theme-2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        </div>
+                                        <p>As a software professional, you are an innovator, problem solver,
+                                            researcher, and a creative. Your job is to take big ideas
+                                            and make them a reality. With the right support, the possibilities are
+                                            endless.</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p class="mb-2"><strong>Tanggal pendaftaran</strong></p>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            <div class="progress-bar bg-theme-2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        </div>
+                                        <p>18.05.2018</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <p class="mb-2"><strong>Status Kesehatan</strong></p>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            <div class="progress-bar bg-theme-2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        </div>
+                                        <span class="badge badge-pill badge-outline-secondary">SEHAT</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="card d-inline-block mb-3 float-left mr-2">
-                                <div class="position-absolute pt-1 pr-2 r-0">
-                                    <span class="text-extra-small text-muted">09:28</span>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex flex-row pb-2">
-                                        <a class="d-flex" href="#">
-                                            <img alt="Profile Picture" src="img/profile-pic-l.jpg"
-                                                class="img-thumbnail border-0 rounded-circle mr-3 list-thumbnail align-self-center xsmall">
-                                        </a>
-                                        <div class=" d-flex flex-grow-1 min-width-zero">
-                                            <div
-                                                class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                                <div class="min-width-zero">
-                                                    <p class="mb-0 truncate list-item-heading">Sarah Kortney</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="chat-text-left">
-                                        <p class="mb-0 text-semi-muted">
-                                            It looks to me like you have a lot planned before your deadline. I would
-                                            suggest you push your deadline back so you have
-                                            time to run a successful advertising campaign.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="card d-inline-block mb-3 float-left mr-2">
-                                <div class="position-absolute pt-1 pr-2 r-0">
-                                    <span class="text-extra-small text-muted">09:30</span>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex flex-row pb-2">
-                                        <a class="d-flex" href="#">
-                                            <img alt="Profile Picture" src="img/profile-pic-l.jpg"
-                                                class="img-thumbnail border-0 rounded-circle mr-3 list-thumbnail align-self-center xsmall">
-                                        </a>
-                                        <div class="d-flex flex-grow-1 min-width-zero">
-                                            <div
-                                                class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                                <div class="min-width-zero">
-                                                    <p class="mb-0 truncate list-item-heading">Sarah Kortney</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="chat-text-left">
-                                        <p class="mb-0 text-semi-muted">
-                                            How do you think we should move forward with this project? As you know, we
-                                            are
-                                            expected to present it to our clients next
-                                            week. </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="card d-inline-block mb-3 float-right  mr-2">
-                                <div class="position-absolute pt-1 pr-2 r-0">
-                                    <span class="text-extra-small text-muted">09:41</span>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex flex-row pb-2">
-                                        <a class="d-flex" href="#">
-                                            <img alt="Profile Picture" src="img/profile-pic-l-4.jpg"
-                                                class="img-thumbnail border-0 rounded-circle mr-3 list-thumbnail align-self-center xsmall">
-                                        </a>
-                                        <div class="d-flex flex-grow-1 min-width-zero">
-                                            <div
-                                                class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                                <div class="min-width-zero">
-                                                    <p class="mb-0 list-item-heading truncate">Mimi Carreira</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="chat-text-left">
-                                        <p class="mb-0 text-semi-muted">
-                                            I would suggest you discuss this further with the advertising team.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="card d-inline-block mb-3 float-right  mr-2">
-                                <div class="position-absolute pt-1 pr-2 r-0">
-                                    <span class="text-extra-small text-muted">09:41</span>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex flex-row pb-2">
-                                        <a class="d-flex" href="#">
-                                            <img alt="Profile Picture" src="img/profile-pic-l-4.jpg"
-                                                class="img-thumbnail border-0 rounded-circle mr-3 list-thumbnail align-self-center xsmall">
-                                        </a>
-                                        <div class="d-flex flex-grow-1 min-width-zero">
-                                            <div
-                                                class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                                <div class="min-width-zero">
-                                                    <p class="mb-0 list-item-heading truncate">Mimi Carreira</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="chat-text-left">
-                                        <p class="mb-0 text-semi-muted">
-                                            I am very busy at the moment and on top of everything, I forgot my umbrella
-                                            today.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="card d-inline-block mb-3 float-right mr-2">
-                                <div class="position-absolute pt-1 pr-2 r-0">
-                                    <span class="text-extra-small text-muted">09:41</span>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex flex-row pb-2">
-                                        <a class="d-flex" href="#">
-                                            <img alt="Profile Picture" src="img/profile-pic-l-4.jpg"
-                                                class="img-thumbnail border-0 rounded-circle mr-3 list-thumbnail align-self-center xsmall">
-                                        </a>
-                                        <div class="d-flex flex-grow-1 min-width-zero">
-                                            <div
-                                                class="m-2 pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
-                                                <div class="min-width-zero">
-                                                    <p class="mb-0 list-item-heading truncate">Mimi Carreira</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="chat-text-left">
-                                        <p class="mb-0 text-semi-muted">
-                                            I am very busy at the moment and on top of everything, I forgot my umbrella
-                                            today.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
                         </div>
 
+                        <div class="col-12 col-lg-8 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Detail Interaksi {Nama-User}</h5>
+                                    <table class="data-table data-table-scrollable responsive nowrap"
+                                        data-order="[[ 1, &quot;desc&quot; ]]">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Sales</th>
+                                                <th>Stock</th>
+                                                <th>Category</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Marble Cake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1452</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">62</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Hummingbird</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1414</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">85</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Mantecada</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1401</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">21</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Batik Cake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1387</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">114</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Kransekake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1356</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">27</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Aranygaluska</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1323</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">57</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Lamington</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1301</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">11</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Kremówka</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1287</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">94</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Kladdkaka</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1261</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">37</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Fruitcake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1245</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">65</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Blondie</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1218</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">19</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Chocolate Cake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1200</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">45</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Banoffee Pie</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1192</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">22</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Croquembouche</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1176</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">48</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Basbousa</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1154</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">13</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Bebinca</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1150</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">4</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Punschkrapfen</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1108</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">87</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Crystal Cake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1068</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">43</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Napoleonshat</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1050</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">41</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Bibingka</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">1024</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">12</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Magdalena</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">998</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">24</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Butterkuchen</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">981</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">17</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Charlotte</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">976</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">26</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Avocado Cake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">961</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">106</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Fig Cake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">948</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">37</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Šakotis</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">931</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">54</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Chenna Poda</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">930</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">7</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Salzburger Nockerl</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">924</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">20</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Pavlova</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">918</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">14</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Soufflé</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">905</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">64</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Cremeschnitte</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">845</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">12</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Kolaczki</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">838</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">21</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Cheesecake</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">830</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">36</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Gingerbread</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">807</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">21</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Goose Breast</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">795</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">9</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Baumkuchen</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">792</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">18</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Faworki</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">783</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">38</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Kabuni</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">749</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">148</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Cupcakes</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Buccellato</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">738</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">51</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="list-item-heading">Vínarterta</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">711</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">49</p>
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted">Desserts</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -926,11 +1345,11 @@
             <ul class="nav nav-tabs card-header-tabs ml-0 mr-0 mb-1" role="tablist">
                 <li class="nav-item w-50 text-center">
                     <a class="nav-link active" id="first-tab" data-toggle="tab" href="#firstFull" role="tab"
-                        aria-selected="true">Messages</a>
+                        aria-selected="true">Intraksi Hari ini</a>
                 </li>
                 <li class="nav-item w-50 text-center">
                     <a class="nav-link" id="second-tab" data-toggle="tab" href="#secondFull" role="tab"
-                        aria-selected="false">Contacts</a>
+                        aria-selected="false">Seluruh Intraksi</a>
                 </li>
             </ul>
 
@@ -1255,16 +1674,55 @@
             </a>
         </div>
 
-        <div class="chat-input-container d-flex justify-content-between align-items-center">
-            <input class="form-control flex-grow-1" type="text" placeholder="Say something...">
-            <div>
-                <button type="button" class="btn btn-outline-primary icon-button large">
-                    <i class="simple-icon-paper-clip"></i>
-                </button>
-                <button type="button" class="btn btn-primary icon-button large">
-                    <i class="simple-icon-arrow-right"></i>
-                </button>
+        <div class="modal fade modal-right" id="exampleModalRight" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalRight" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit {Nama-User}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
 
+                        <form>
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label>Details</label>
+                                <textarea placeholder="" class="form-control" rows="2"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select class="form-control">
+                                    <option label="&nbsp;">&nbsp;</option>
+                                    <option value="Flexbox">Flexbox</option>
+                                    <option value="Sass">Sass</option>
+                                    <option value="React">React</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Status</label>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="customCheck1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1">Completed</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary"
+                            data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -1272,6 +1730,7 @@
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script src="js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="js/vendor/datatables.min.js"></script>
     <script src="js/vendor/mousetrap.min.js"></script>
     <script src="js/dore.script.js"></script>
     <script src="js/scripts.js"></script>
