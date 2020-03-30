@@ -1,5 +1,12 @@
 # template-adminpanel
  Template Admin Panel - Clean template for ready to develop admin panel
+ 
+## Clean File Template
+- login.html
+- index.html
+- users.html
+- 404.html
+ 
 
 ## Preview
 
